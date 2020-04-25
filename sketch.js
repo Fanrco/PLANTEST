@@ -1,6 +1,7 @@
 function setup() {
-    cnv = createCanvas(600,400);
+    cnv = createCanvas(800,400);
     cnv.parent("cnv");
+    
     background(91,191,0);
     
 
