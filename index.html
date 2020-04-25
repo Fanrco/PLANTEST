@@ -10,6 +10,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/sticky-menu.css" rel="stylesheet">
     <script src="p5.js"></script>
+    <script src="loadimgs.js"></script>
+    <script src="plantinfo.js"></script>
     <script src="sketch.js"></script>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -68,11 +70,120 @@
             <center>
             <div id='info'>
             <h4>INFO:</h4>
+            <p id="infotext">click a plant to get information about it and start planting!</p>
             </div>
             <div id='cnv'></div>
-            <div id='plants'>
-            <h4>PLANTS:</h4>
-            </div>
+                
+<!-- plant selector--->
+                
+<div id='plants'>
+                
+<h4>PLANTS:</h4>
+
+<center>
+    
+<table style="width:100%">
+    <tr>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/broccoli.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectBroccoli()"> 
+        <p>Broccoli</p> 
+        </center>
+    </td>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/carrot.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectCarrot()"> 
+        <p>Carrots</p> 
+        </center>
+    </td>
+      
+    
+  </tr>
+    
+    <tr>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/cauliflower.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectCauliflower()"> 
+        <p>Cauliflower</p> 
+        </center>
+    </td>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/garlic.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectGarlic()"> 
+        <p>Garlic</p> 
+        </center>
+    </td>
+      
+    
+  </tr>
+    
+    <tr>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/celery.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectCelery()"> 
+        <p>Celery</p> 
+        </center>
+    </td>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/lettuce.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectLettuce()"> 
+        <p>Lettuce</p> 
+        </center>
+    </td>
+      
+    
+  </tr>
+    
+    <tr>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/beet.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectBeet()"> 
+        <p>Beets</p> 
+        </center>
+    </td>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/rosebush.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectRosebush()"> 
+        <p>Rose Bush</p> 
+        </center>
+    </td>
+      
+    
+  </tr>
+    
+    <tr>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/snapdragon.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectSnapdragon()"> 
+        <p>Snapdragons</p> 
+        </center>
+    </td>
+    
+    <td> 
+        <center> 
+        <input type="image" src="Assets/daffodil.png" style="width:80px;height:80px;" class="plantbtn" onclick="selectDaffodil()"> 
+        <p>Daffodils</p> 
+        </center>
+    </td>
+      
+    
+  </tr>
+    
+
+    
+</table>  
+
+</center>           
+</div>
             </center>
             <br>
         </div>

@@ -56,6 +56,23 @@ html {
 #gardenUI {text-align:center;
 color: saddlebrown;}
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: wheat;
+  border-radius: 5px;
+}
+
 #cnv {
     
     margin:auto; height: 410px; width: 820px; 
@@ -73,7 +90,9 @@ color: saddlebrown;}
     vertical-align: top;}
 
 #info {
-    margin:auto; height: 410px; width: 210px; 
+    margin:auto; height: 410px; width: 220px;
+    
+    padding: 10px;
             
     background-color: saddlebrown; 
               
@@ -85,10 +104,10 @@ color: saddlebrown;}
     
     color: wheat;
             
-    line-height: 4px;}
+    line-height: 20px;}
 
 #plants {
-    margin:auto; height: 410px; width: 210px; 
+    margin:auto; height: 410px; width: 220px; 
             
     background-color: saddlebrown; 
               
@@ -100,6 +119,20 @@ color: saddlebrown;}
     
     color: wheat;
             
-    line-height: 4px;}
+    line-height: 20px;
 
+    overflow-x:hidden;
 
+    overflow-y:auto}
+
+.plantbtn {
+  background-color: saddlebrown; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.plantbtn:hover {
+  background-color: darkorange;
+}
