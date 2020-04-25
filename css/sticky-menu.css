@@ -53,5 +53,53 @@ html {
     color: white;
 }
 
+#gardenUI {text-align:center;
+color: saddlebrown;}
+
+#cnv {
+    
+    margin:auto; height: 410px; width: 820px; 
+    
+    padding-top: 10px;
+              
+    background-color: saddlebrown; 
+              
+    box-shadow: 0px 10px saddlebrown;
+            
+    display:inline-block;
+    
+    color: wheat;
+            
+    vertical-align: top;}
+
+#info {
+    margin:auto; height: 410px; width: 210px; 
+            
+    background-color: saddlebrown; 
+              
+    box-shadow: 0px 10px saddlebrown;
+            
+    display:inline-block;
+            
+    vertical-align: top;
+    
+    color: wheat;
+            
+    line-height: 4px;}
+
+#plants {
+    margin:auto; height: 410px; width: 210px; 
+            
+    background-color: saddlebrown; 
+              
+    box-shadow: 0px 10px saddlebrown;
+            
+    display:inline-block;
+            
+    vertical-align: top;
+    
+    color: wheat;
+            
+    line-height: 4px;}
 
 
