@@ -37,7 +37,7 @@ html {
     padding-top: 100px;
     text-align: center;
     color: black;
-    background: #FFF;
+    background: #98d4fa ;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -105,6 +105,62 @@ color: saddlebrown;}
     color: wheat;
             
     line-height: 20px;}
+
+#shoppdf {text-align:center;
+color: saddlebrown;}
+
+#shoplist {
+    margin:auto; height: 410px; width: 400px;
+    
+    padding: 30px;
+            
+    background-color: #279ae3; 
+              
+    box-shadow: 0px 10px #279ae3;
+            
+    display:inline-block;
+            
+    vertical-align: top;
+    
+    color: black;
+            
+    line-height: 20px;
+
+  overflow-x:hidden;
+
+    overflow-y:auto;
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+#pdfbox {
+    margin:auto; height: 410px; width: 400px;
+    
+    padding: 10px;
+            
+    background-color: #de214a; 
+              
+    box-shadow: 0px 10px #de214a;
+            
+    display:inline-block;
+            
+    vertical-align: top;
+    
+    color: black;
+            
+    line-height: 20px;}
+
 
 #plants {
     margin:auto; height: 410px; width: 220px; 

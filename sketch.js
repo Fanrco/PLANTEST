@@ -25,11 +25,17 @@ function setup() {
 function draw(){
     background(91,191,0);
     drawAxes();
+    
+    plantCursor();
+    g.show();
 }
 
 function plantCursor(){
-    if(selPlant!="NONE"){
-        image(plantimg["carrots"],mouseX,mouseY);
+    if(selplant!="NONE"){
+        pimg=plantimg[selplant];
+        r=(plantradius[selplant]/12)*xoff;
+        pimg.resize(r,0);
+        image(pimg,mouseX-r/2,mouseY-r/2);
     }
 }
 
@@ -59,23 +65,77 @@ function drawAxes(){
 
 
 function mousePressed(){
-    if(selPlant!="NONE"){
-        console.log(selPlant);
+    if(mouseX>width || mouseX<0 || mouseY>height || mouseY<0){
+        //donothing
+    }else{
+    if(mouseButton === RIGHT) {
+        g.delete();
+        console.log("rightclick");
+    }else{
+        
+    
+    if(selplant!="NONE"){
+        console.log(selplant);
+        newplant=new Plant(selplant,mouseX,mouseY);
+        g.plants.push(newplant);
+    }
+    
+    }
+    createShopList();
     }
 }
 
-function downloadGarden(){
-    document.body.innerHTML+="<a id='test' href='data:text;charset=utf-8,"+encodeURIComponent("hi")+"' download='GardenSave'>Your Download</a>";
-    document.getElementById('test').click();
-}
 
 function Garden(){
     this.plants=[]
     
+    this.show = function(){
+        for(i=0; i < this.plants.length; i++){
+            this.plants[i].show();
+        }
+    }
+    
+    this.delete = function(){
+        na=[];
+       for(i=this.plants.length-1; i >=0 ; i--){
+           if(dist(mouseX,mouseY,this.plants[i].x,this.plants[i].y)>this.plants[i].r/2){
+               na.push(this.plants[i]);
+           }
+        } 
+        this.plants=na;
+    }
+    
+    this.export=function(){
+        savefile=""
+        for(i=0; i < this.plants.length; i++){
+            savefile+=this.plants[i].name+" "+this.plants[i].x+" "+this.plants[i].y+" ";
+        }
+        
+        return savefile;
+    }
+    
+    this.import=function(savefile){
+        this.plants=[];
+        ainfo=savefile.split(" ");
+        
+        for(i=0;i<((ainfo.length)/3)-1;i++){
+            this.plants.push(new Plant(ainfo[i*3],Number(ainfo[i*3+1]),Number(ainfo[i*3+2])));
+        }
+        createShopList();
+    }
 }
 
-function Plant(plantname){
+function Plant(plantname,x,y){
     this.name=plantname;
+    this.img =plantimg[this.name];
+    this.r=(plantradius[this.name]/12)*xoff;
+    this.img.resize(this.r,0);
+    this.x=x;
+    this.y=y;
+    
+    this.show = function(){
+        image(this.img,this.x-this.r/2,this.y-this.r/2);
+    }
     
 }
 

@@ -9,7 +9,11 @@
     <meta name="description" content="Simplified Bootstrap template with sticky menu">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/sticky-menu.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
     <script src="p5.js"></script>
+    <script src="getpdf.js"></script>
+    <script src="shoplist.js"></script>
+    <script src="dlgarden.js"></script>
     <script src="loadimgs.js"></script>
     <script src="plantinfo.js"></script>
     <script src="sketch.js"></script>
@@ -32,13 +36,13 @@
                         <a class="page-scroll" href="#page-top">PLANTEST</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#newg">New Garden</a>
+                        <a onclick="clearGarden()">New Garden</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#saveg">Save Garden</a>
+                        <a onclick="downloadGarden()">Save Garden</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#loadg">Load Garden</a>
+                        <a onclick="loadGarden()">Load Garden</a>
                     </li>
                 </ul>
             </div>	<!-- .navbar-collapse -->
@@ -74,6 +78,7 @@
             </div>
             <div id='cnv'></div>
                 
+        
 <!-- plant selector--->
                 
 <div id='plants'>
@@ -187,19 +192,37 @@
             </center>
             <br>
         </div>
+        <p>Left Click to place plant, Right Click to delete plant. Plant Sizes are proportional to the amount of space they require to grow.</p>
         
-            <a class="btn btn-primary page-scroll" href="#buy">Click To Buy Your Supplies!</a>
+            <a class="btn btn-primary page-scroll" href="#buy">Click To Buy Your Supplies</a>
     </section>
 	
     <!-- Buy Supplies -->
     <section id="buy" class="buy-section">
         
-            <h1>Buy Supplies</h1>
+            <h1>Find Supplies | Download Plan </h1>
         
             <br>
-            <center>
-                
-    </section>
+            
+<div id="shoppdf">
+
+<div id ="shoplist">
+        
+</div>     
+<div id ="pdfbox">
+<img src="https://www.sciencescriminelles.fr/wp-content/uploads/2019/04/pdf-2127829.png" style="width:280px;height:300px;">
+    <br>
+<button id="pdfdl" onclick="downloadPDF()">Click Here to Download PDF</button>
+</div>
+    
+</div>  
+<br>
+<br>
+        <a class="btn btn-primary page-scroll" href="#planner">Click To Return to Garden</a>
+    
+</section>
+        
+        
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
