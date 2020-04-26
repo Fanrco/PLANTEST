@@ -45,5 +45,5 @@ function downloadPDF(){
         }
     }
 
-    doc.save('a4.pdf')
+    doc.save('GardenPlans.pdf')
 }
